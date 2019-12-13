@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contro" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlRocket">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="125.0" prefWidth="600.0" styleClass="header" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <Pane opacity="0.46" prefHeight="25.0" prefWidth="200.0" styleClass="footer" BorderPane.alignment="CENTER" />
+         </bottom>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Label">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <textFill>
+                        <LinearGradient endY="0.33015875589279897" startX="0.8444444803964524" startY="1.0">
+                           <stops>
+                              <Stop color="#632ec5" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <ImageView fx:id="fotoLo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../view.assets/profilephoto.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXTextField focusColor="#4700fc" labelFloat="true" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Usuario" unFocusColor="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField focusColor="#0200fc" labelFloat="true" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Contraseña" unFocusColor="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXButton maxWidth="200.0" minWidth="200.0" onAction="#openStage" prefWidth="200.0" ripplerFill="TRANSPARENT" styleClass="btnLogin" text="Let me in!" textFill="#7b00ff">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Guest access..." textFill="#5711ef" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+                     <tooltip>
+                        <Tooltip text="Invitados" />
+                     </tooltip>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
